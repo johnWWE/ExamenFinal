@@ -69,6 +69,12 @@ while True:
     print("[4.] Mostrar número de tareas ")
     print("[0.] Salir ")
     opcion = int(input("Opción: "))
+    try:
+        opcion =int(opcion)
+    except ValueError:
+        print("ERROR, ingrese de nuevo :")
+        continue
+
     if opcion == 1:
         tarea = input("Ingrese la  tarea que desee : > ")
 
