@@ -54,6 +54,12 @@ while True:
     print("[3.] Mostrar lista de compras | ")
     print("[0] Salir")
     opcion = int(input("Ingrese una opción: "))
+    #evitara el error cuando el usuario no digite el valor numerico
+    try:
+        opcion =int(opcion)
+    except ValueError:
+        print("ERROR, ingrese de nuevo :")
+        continue
     if opcion == 1:
         # agregando el nombre del producto
         producto = input("Ingrese el nombre del producto: ")
